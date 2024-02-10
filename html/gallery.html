@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/gallery.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Gallery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <style>
+            /* haetaan IBM Plex Sans */
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/00b3df9410.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <div class="topnav">
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <!-- icon to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i id="icon" class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+
+        <!-- page header -->
+        <div class="header">
+            <h2>Gallery</h2>
+        </div>
+        
+      
+
+
+        <div id="myBtnContainer" class="btn-container">
+            <button class="btn active" id="show-all"> Show all</button>
+            <button class="btn" id="show-digital"> Digital</button>
+            <button class="btn" id="show-traditional"> Traditional</button>
+            <button class="btn" id="show-project"> Project</button>
+        </div>
+          
+        <!-- Portfolio Gallery Grid -->
+        <div class="row" id="row">
+
+            <div id="digital" class="column digital">
+                <img src="img/img1.jpg" style="width:100%" id="myImg" class="modal-img" href="#myModal1">
+                <div id="myModal1" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" src="img/img1.jpg" >
+                    <div id="caption">Digital, 2023</div>
+                </div>
+            </div>
+            
+            <div id="traditional" class="column traditional">
+                <img src="img/trad3.PNG" style="width:100%" id="myImg" class="modal-img" href="#myModal2">
+                <div id="myModal2" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" src="img/trad3.PNG">
+                    <div id="caption">Traditional, 2020</div>
+                </div>
+            </div>
+            
+            <div id="digital" class="column digital">
+                <img src="img/img2.jpg" style="width:100%" id="myImg" class="modal-img" href="#myModal3">
+                <div id="myModal3" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" src="img/img2.jpg">
+                    <div id="caption">Digital, 2023</div>
+                </div>
+            </div>
+            
+            <div id="traditional" class="column digital">
+                <img src="img/img5.PNG" style="width:100%" id="myImg" class="modal-img" href="#myModal4">
+                <div id="myModal4" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" src="img/img5.PNG">
+                    <div id="caption">Digital, 2021</div>
+                </div>
+            </div>
+            
+            <div id="traditional" class="column traditional">
+                <img src="img/trad1.PNG" style="width:100%" id="myImg" class="modal-img" href="#myModal6">
+                <div id="myModal6" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" src="img/trad1.PNG">
+                    <div id="caption">Traditional, 2022</div>
+                </div>
+            </div>
+
+            <div id="digital" class="column digital">
+                <img src="img/img4.jpg" style="width:100%" id="myImg" class="modal-img" href="#myModal5">
+                <div id="myModal5" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" src="img/img4.jpg">
+                    <div id="caption">Digital, 2021</div>
+                </div>
+            </div>
+
+            <div id="traditional" class="column traditional">
+                <img src="img/trad2.PNG" style="width:100%" id="myImg" class="modal-img" href="#myModal7">
+                <div id="myModal7" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" src="img/trad2.PNG">
+                    <div id="caption">Traditional, 2020</div>
+                </div>
+            </div>
+
+            <div id="project" class="column project">
+                <img src="img/LLISOMPI - Copy.jpg" style="width:100%" id="myImg" class="modal-img" href="#myModal8">
+                <div id="myModal8" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" src="img/LLISOMPI - Copy.jpg">
+                    <div id="caption">Digital, 2022</div>
+                </div>
+            </div>
+
+        </div>
+        <!-- END GRID -->
+
+
+        <script>
+            /* TOPNAV */
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+
+                if (document.getElementById('icon').getAttribute('class') == 'fa-solid fa-chevron-down') {
+                    document.getElementById('icon').setAttribute('class', 'fa-solid fa-chevron-up');
+                } else {
+                    document.getElementById('icon').setAttribute('class', 'fa-solid fa-chevron-down');  
+                }
+            } 
+            /* /TOPNAV */
+
+
+            /* MODAL */
+            var imgbtn = document.querySelectorAll('img.modal-img');
+            var modals = document.querySelectorAll('.modal');
+            var spans = document.getElementsByClassName('close');
+
+            for (var i = 0; i < imgbtn.length; i++) {
+                imgbtn[i].onclick = function(e) {
+                    e.preventDefault();
+                    modal = document.querySelector(e.target.getAttribute("href"));
+                    modal.style.display = "block";
+                }
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].onclick = function() {
+                    for (var index in modals) {
+                        if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+                    }
+                }
+            }
+            /* /MODAL */
+
+
+            /* BUTTONS */
+            // Add active class to the current button (highlight)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function(){
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+
+            // you better werk b*tch
+            $(document).ready(function(){
+                $("#show-all").click(function(){
+                    $("div.row > div.digital").show();
+                    $("div.row > div.traditional").show();
+                    $("div.row > div.project").show();
+                });
+                $("#show-digital").click(function(){
+                    $("div.row > div.digital").show();
+                    $("div.row > div.traditional").hide();
+                    $("div.row > div.project").hide();
+                });
+                $("#show-traditional").click(function(){
+                    $("div.row > div.digital").hide();
+                    $("div.row > div.traditional").show();
+                    $("div.row > div.project").hide();
+                });
+                $("#show-project").click(function(){
+                    $("div.row > div.digital").hide();
+                    $("div.row > div.traditional").hide();
+                    $("div.row > div.project").show();
+                });
+            })
+            /* /BUTTONS */
+
+
+
+
+        </script>
+    </body>
+
+
+    <footer>
+
+    </footer>
+</html>

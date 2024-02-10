@@ -1,0 +1,223 @@
+
+body {
+    margin:0; 
+    background-color: #ffffff;  
+}
+  
+body, div, h1, h2, h3, a, p {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    float: none;
+    position: relative;
+    text-align: center;
+}
+
+.header h2 {
+    font-size: 30px;
+}
+
+/* TOPNAV */
+.topnav {
+    overflow: hidden;
+    background-color: #ffffff;
+    text-align: center;
+    z-index: 7;
+    padding-bottom: -30px;
+}
+
+/* Hide the links inside the navigation menu */
+.topnav #myLinks {
+    display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+    color: #000000;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+/* Style the menu */
+.topnav a.icon {
+    background: #ffffff;
+    display: block;
+}
+/* /TOPNAV */
+
+
+/* GALLERY BUTTONS */
+.btn {
+    border: none;
+    outline: none;
+    padding: 4px 10px;
+    background-color: #DADAD9;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: center;
+}
+
+.btn-container {
+    float: none;
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn.active {
+    background-color: #40434E;
+     color: white;
+}
+/* /GALLERY BUTTONS */
+
+
+
+/* MODAL */
+#myImg {
+    cursor: pointer;
+    transition: 0.2s;
+}
+  
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 5px; 
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.89); /* Black w/ opacity */
+}
+  
+/* Modal Content (Image) */
+.modal-content {
+    display: block;
+    width: 100vw;
+    height: 94vh;
+    margin: auto;
+    object-fit: contain;
+    align-items: center;
+}
+  
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding-top: 5px;
+    height: 5vh;
+    align-items: center;
+}
+  
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+  
+@keyframes zoom {
+    from {transform:scale(0.9)}
+    to {transform:scale(1)}
+}
+  
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+} 
+/* /MODAL */
+
+
+
+
+
+/* IMG */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    max-width: 1200px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+}
+  
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 30vw;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+  
+.column img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+#myImg {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    object-fit: cover;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+/* IMG */

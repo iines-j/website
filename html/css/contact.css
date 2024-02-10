@@ -1,0 +1,164 @@
+
+body {
+    margin:0;   
+    background-color: #ffffff;  
+}
+  
+body, div, h1, h2, h3, a, p, label {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    float: none;
+    position: relative;
+    text-align: center;
+}
+
+.header h2 {
+    font-size: 30px;
+}
+
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #ffffff;
+    text-align: center;
+    z-index: 6;
+    margin-top: 0px;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+    color: #000000;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+/* Style the menu */
+.topnav a.icon {
+    background: #ffffff;
+    display: block;
+}
+
+
+h3 {
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+
+/* inputs, select elements and textareas */
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #82858E;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+}
+  
+/* labels */
+label {
+    padding: 5px 12px 12px 0;
+    display: inline-block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* text form borders when focused */
+input:focus { 
+    outline: none !important;
+    border-color: #82858E;
+    box-shadow: 0 0 3px #82858E;
+}
+textarea:focus { 
+    outline: none !important;
+    border-color: #82858E;
+    box-shadow: 0 0 3px #82858E;
+}
+
+  
+/* submit button */
+input[type=submit] {
+    background-color: #40434E;
+    color: #FFFFFF;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+  
+/* container */
+.container {
+    border-radius: 10px;
+    background-color: #DADAD9;
+    padding: 20px;
+    width: 90vw;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+  
+/* Floating column for labels */
+.col-25 {
+    float: left;
+    width: 12%;
+    margin-top: 6px;
+    margin-left: 3%;
+    margin-right: 2%;
+    text-align: right;
+}
+  
+/* Floating column for inputs */
+.col-75 {
+    float: none;
+    width: 60%;
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Responsive layout */
+@media screen and (max-width: 700px) {
+    .col-25, .col-75 {
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+   .col-25 {
+    text-align: left;
+    margin-bottom: 0;
+   }
+} 

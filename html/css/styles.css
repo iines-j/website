@@ -1,0 +1,137 @@
+
+body {
+    margin:0;   
+    background-color: #ffffff;  
+}
+  
+body, div, h1, h2, h3, a, p {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.header {
+    float: none;
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header h1 {
+    font-size: 30px;
+}
+  
+
+/* TOPNAV */
+.topnav {
+    overflow: hidden;
+    text-align: center;
+    z-index: 6;
+    margin-top: 40px;
+}
+    
+.topnav a {
+    display: inline-block;
+    margin-right: -4px;  /* inline-block gap fix */
+    color: #000000;
+    padding: 22px 22px;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* SLIDESHOW */
+.slideshow-container {
+    background-color: #DADAD9;
+    max-width: 1000px;
+    max-height: 800px;
+    width: 90vw;
+    height: 80vh;
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* center img vertically & horizontally */
+img {
+    width: 60vw;
+    height: 80vh;
+    margin: 0;
+    object-fit: contain;
+    align-items: center;
+}
+
+.mySlides {
+    display: none;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    color: #000000;
+}
+  
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+  
+/* dots */
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #DADAD9;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #82858E;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+

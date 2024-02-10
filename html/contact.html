@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/contact.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Contact</title>
+        <style>
+            /* haetaan IBM Plex Sans */
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/00b3df9410.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+            </div>
+            <!-- icon to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i id="icon" class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+
+        <div class="header">
+            <h2>Contact</h2>
+        </div>
+        
+        
+        <div class="container">
+          <h3 class="hello">Send me a message!</h3>
+
+          <form action="action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">First Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name...">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Last Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="country">Email</label>
+              </div>
+              <div class="col-75">
+                  <input type="email" id="email" name="email" placeholder="Your email...">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Message</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div> 
+
+
+     
+
+        <script>
+
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+
+                if (document.getElementById('icon').getAttribute('class') == 'fa-solid fa-chevron-down') {
+                    document.getElementById('icon').setAttribute('class', 'fa-solid fa-chevron-up');
+                } else {
+                    document.getElementById('icon').setAttribute('class', 'fa-solid fa-chevron-down');  
+                }
+
+            } 
+
+        </script>
+    </body>
+
+
+    <footer>
+
+    </footer>
+</html>

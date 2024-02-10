@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/about.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Iines Junttila</title>
+        <style>
+            /* haetaan IBM Plex Sans */
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/00b3df9410.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <!-- icon to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i id="icon" class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+
+        <div class="header">
+            <h2>About</h2>
+        </div>
+        
+      
+        <div class="container1">
+            <div class="column" id="myImg">
+                <img src="img/id.jpg">
+            </div>
+            <div class="column" id="myIntro">
+                <p class="greeting">Hello!</p>
+                <p class="introtext">I'm Iines Junttila, a visual artist and software engineering student based in Finland.</p>
+                <i id="mediaIcon" class="fa-regular fa-snowflake fa-lg" title="this would be a social media link if I had anything to link to"></i>
+                <i id="mediaIcon" class="fa-regular fa-moon fa-lg" title="this would be a social media link if I had anything to link to"></i>
+                <i id="mediaIcon" class="fa-regular fa-star fa-lg" title="this would be a social media link if I had anything to link to"></i>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div id="education">
+                <p class="subheader">Education</p>
+
+                <p class="title">Haaga-Helia</p>
+                <hr class="dotline">
+                <p class="details">Bachelor of Business Information Technology, 2023-2026</p>
+
+                <p class="title">Livia</p>
+                <hr class="dotline">
+                <p class="details">Vocational Qualification in Natural and Environmental Protection - Nature Guide, 2019-2021</p>
+                
+                <p class="title">Pekka Halosen Akatemia</p>
+                <hr class="dotline">
+                <p class="details">Vocational Qualification in Media and Visual Expression, 2015-2018</p>
+            </div>
+
+        </div>
+     
+
+        <script>
+
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+
+                if (document.getElementById('icon').getAttribute('class') == 'fa-solid fa-chevron-down') {
+                    document.getElementById('icon').setAttribute('class', 'fa-solid fa-chevron-up');
+                } else {
+                    document.getElementById('icon').setAttribute('class', 'fa-solid fa-chevron-down');  
+                }
+
+            } 
+
+        </script>
+    </body>
+
+
+    <footer>
+
+    </footer>
+</html>
